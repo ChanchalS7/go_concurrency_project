@@ -2,9 +2,9 @@ package producer
 
 import (
 	"context"
-	"crypto/rand"
 	"distribute_task_processing/models"
 	"fmt"
+	"math/rand"
 	"sync"
 	"time"
 )

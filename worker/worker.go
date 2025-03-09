@@ -2,10 +2,11 @@ package worker
 
 import (
 	"context"
-	"crypto/rand"
+
 	"distribute_task_processing/config"
 	"distribute_task_processing/models"
 	"fmt"
+	"math/rand"
 	"sync"
 	"time"
 )
