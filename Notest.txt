@@ -1,0 +1,11 @@
+Project Architecture : Distributed task processing system
+-The producer generate tasks, sends them to a queue. Workers read from the queue, process tasks, send result aggregator. The aggregator collects results and provide an API for querying. Also a monitor to track system metrics. Need to handle concurrency with channels and go-routines, use a wait group to wait for workers, mutexes to protect shared data, context for cancellation, maybe a worker pool pattern, rate limiting using tickers and select statement to handle multiple channel operations.
+1. Task Producer : Generate tasks at intervals, sends to task queue.
+2. Tasks Queue : Buffered channel to hold tasks.
+3. Worker Pool : Multiple workers consuming tasks from queue.
+4. Result Aggregation : Collects results from workers, allows querying.
+5. Monitor : Tracks metrics like task processed, active workers.
+6. Rate Limiter : Uses a ticker to limit task processing rate.
+7. Graceful Shutdown : Using context and signal handling.
+
+Interview question : 
