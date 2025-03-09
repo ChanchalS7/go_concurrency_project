@@ -8,4 +8,12 @@ Project Architecture : Distributed task processing system
 6. Rate Limiter : Uses a ticker to limit task processing rate.
 7. Graceful Shutdown : Using context and signal handling.
 
+Project components : 
+Task Producer
+Worker Pool
+Rate Limiter
+Result Aggregator
+Graceful Shutdown Handler
+Monitoring System
+
 Interview question : 
